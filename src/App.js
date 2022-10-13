@@ -34,6 +34,7 @@ function App() {
   //   const changeValue = (event) => {
   //     changeInputValue(event.target.value);
   //   };
+
   const nextSlideVolk = () => {
     drVolk((current) => {
       if (current < masVolk.length - 1) {
@@ -70,7 +71,18 @@ function App() {
       }
     });
   };
-  console.log(window.location.pathname);
+  console.log(window.history);
+
+  console.log(volkNow);
+  const handleChangePage = () => {
+    window.history.replaceState(
+      { page: 2 },
+      "JavaScript",
+      window.location.pathname === "/bolshoi-volk"
+        ? "/lovkaya-belka"
+        : "/bolshoi-volk"
+    );
+  };
 
   if (window.location.pathname === "/bolshoi-volk")
     return (
@@ -85,6 +97,7 @@ function App() {
         <div className="header">
           <h2>Хочешь увидеть белок?</h2>
           <a href="/lovkaya-belka">Да!</a>
+          <button onClick={handleChangePage}>test</button>
         </div>
         <div className="slider">
           <div className="sliders">
@@ -105,6 +118,7 @@ function App() {
         <div className="header">
           <h2>Хочешь увидеть волков?</h2>
           <a href="/bolshoi-volk">Да!</a>
+          <button onClick={handleChangePage}>test</button>
         </div>
         <div className="slider">
           <div className="sliders">
