@@ -12,3 +12,33 @@
     bottom: 80px;
     left: 80px;
 }
+h2 {
+    text-align: center;
+    color: #89897d;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #fcfffd;
+    background: #8ebaab;
+    width: fit-content;
+    margin: 8px auto;
+    padding: 5px 16px;
+    border-radius: 6px;
+    line-height: 1;
+    transition: all 0.4s;
+}
+a:hover {
+    transform: scale(1.15);
+    transition: all 0.4s;
+}
+button {
+    color: #fcfffd;
+    background:  rgb(142 186 171 / 77%);
+    border: 1px solid #485d56;
+    padding: 7px 10px;
+    line-height: 1;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
