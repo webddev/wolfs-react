@@ -41,6 +41,7 @@ function App() {
 
     }
 
+    console.log(window.location.pathname)
     return (
         <div>
             {/*<h1>{state}</h1>*/}
@@ -61,7 +62,7 @@ function App() {
                         <button onClick={nextSlide}>Next Volk</button>
                         <button onClick={prevSlide}>Prev Volk</button>
                     </div>
-
+                <a href="/bolshoi-volk">VOLK</a>
             </div>
         </div>
     );
